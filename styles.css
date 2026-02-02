@@ -111,16 +111,6 @@ body {
 }
 
 /* Menu cards */
-.fade-in {
-  opacity: 0;
-  transform: scale(0.95);
-  transition: all 0.6s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: scale(1);
-}
 body * {
   opacity: 1 !important;
   visibility: visible !important;
@@ -132,5 +122,6 @@ body * {
   opacity: 1 !important;
   transform: none !important;
 }
+
 
 

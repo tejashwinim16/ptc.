@@ -90,6 +90,11 @@ body{
   opacity:1;
   transform:translateY(0);
 }
+/* Hide all menu item lists initially */
+.menu-list {
+  display: none;
+}
+
 
 
 

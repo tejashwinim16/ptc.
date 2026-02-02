@@ -91,9 +91,10 @@ body{
   transform:translateY(0);
 }
 /* Hide all menu item lists initially */
-.menu-list {
+#menu-details {
   display: none;
 }
+
 
 
 

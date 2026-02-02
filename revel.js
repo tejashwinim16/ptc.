@@ -15,5 +15,4 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
-entry.target.classList.add("show");
 

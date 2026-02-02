@@ -223,39 +223,40 @@ body{color:var(--text); background:#fff; transition: background 0.8s ease;}
 </section>
 
 <script src="revel.js"></script>
- <script>
+<script>
   function hideAllMenus() {
+    // hide whole container
     document.getElementById("menu-details").style.display = "none";
-    document.querySelectorAll(".menu-list").forEach(menu => menu.style.display = "none");
+
+    // hide all menu lists
+    document.querySelectorAll(".menu-list").forEach(menu => {
+      menu.style.display = "none";
+    });
   }
 
   function openMenu(id) {
+    // show container
     const container = document.getElementById("menu-details");
     container.style.display = "block";
-    document.querySelectorAll(".menu-list").forEach(menu => menu.style.display = "none");
 
+    // hide others
+    document.querySelectorAll(".menu-list").forEach(menu => {
+      menu.style.display = "none";
+    });
+
+    // show selected menu
     const selected = document.getElementById(id);
-    if (selected) selected.style.display = "block";
+    if (selected) {
+      selected.style.display = "block";
+    }
 
     container.scrollIntoView({ behavior: "smooth" });
   }
 
   document.addEventListener("DOMContentLoaded", hideAllMenus);
 </script>
-  <script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-
-  document.querySelectorAll(".fade-up, .fade-in")
-    .forEach(el => observer.observe(el));
-</script> 
-</body>
 </html>
+
 
 
 

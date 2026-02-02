@@ -252,8 +252,21 @@ function openMenu(id) {
   document.querySelectorAll(".fade-up, .fade-in")
     .forEach(el => observer.observe(el));
 </script>
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".fade-up, .fade-in")
+    .forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
+
 
 
 

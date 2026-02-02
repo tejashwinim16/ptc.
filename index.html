@@ -223,20 +223,6 @@ body{color:var(--text); background:#fff; transition: background 0.8s ease;}
 </section>
 
 <script src="reveal.js"></script>
-<script>
-// ensure only one menu shows at a time
-function hideAllMenus(){
-  document.querySelectorAll('.menu-list').forEach(m=>m.style.display='none');
-}
-
-document.addEventListener('DOMContentLoaded', hideAllMenus);
-
-function openMenu(id) {
-  hideAllMenus();
-  document.getElementById('menu-details').scrollIntoView({ behavior: 'smooth' });
-  document.getElementById(id).style.display = 'block';
-}
-</script>
   <script>
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -251,6 +237,7 @@ function openMenu(id) {
 </script>
 </body>
 </html>
+
 
 
 
